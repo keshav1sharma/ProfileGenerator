@@ -1,10 +1,11 @@
 # ProfileGen
 
-ProfileGen is a Django-based web application that generates random user profiles. It is built using Django 3.2 and Python 3.9.
+ProfileGen is a Django-based AI web application that generates user profiles automatically from user's Resume. It is built using Django 3.2 and Python 3.9.
 
 ## Features
 
 - Generate random user profiles with basic information such as name, email, phone number, and address.
+- It uses OCR Technology to automatically retrieve information from Resume.
 - Users can download generated profiles in CSV and JSON formats.
 - The application has an admin interface where admins can manage users and view their generated profiles.
 
