@@ -1,74 +1,69 @@
 # ProfileGen
 
-ProfileGen is a Django-based AI web application that generates user profiles automatically from user's Resume. It is built using Django 3.2 and Python 3.9.
+ProfileGen is a web application that allows users to generate a professional profile based on their resume. It extracts relevant information from the resume, such as the candidate's name, contact information, education, work experience, and skills, and presents it in a user-friendly format.
 
 ## Features
 
-- Generate random user profiles with basic information such as name, email, phone number, and address.
-- It uses OCR Technology to automatically retrieve information from Resume.
-- Users can download generated profiles in CSV and JSON formats.
-- The application has an admin interface where admins can manage users and view their generated profiles.
+- Resume Information Extraction: ProfileGen utilizes the PyPDF2 library to extract text from uploaded PDF resumes. It parses the text to extract key details, including the candidate's name, email, phone number, education, work experience, and skills.
+
+- User Input Form: The application provides a user-friendly form for users to manually input their information, including name, email, phone number, education, work experience, and skills.
+
+- Dashboard: Once the user submits their information, ProfileGen presents a dashboard that displays the extracted resume details or the user-submitted information in an organized manner.
 
 ## Installation
 
-To run the application locally, you can follow these steps:
+To run the ProfileGen application locally, follow these steps:
 
-1. Clone the repository to your local machine:
+1. Clone the repository:
 
-```
-git clone https://github.com/keshav1sharma/ProfileGen.git
-```
+   ```
+   git clone https://github.com/keshav1sharma/ProfileGen.git
+   ```
 
 2. Navigate to the project directory:
 
-```
-cd ProfileGen
-```
+   ```
+   cd ProfileGen
+   ```
 
-3. Create a virtual environment:
+3. Install the required dependencies:
 
-```
-python -m venv env
-```
+   ```
+   pip install -r requirements.txt
+   ```
 
-4. Activate the virtual environment:
+4. Run the application:
 
-On Windows:
-```
-env\Scripts\activate
-```
+   ```
+   python manage.py runserver
+   ```
 
-On macOS and Linux:
-```
-source env/bin/activate
-```
-
-5. Install the project dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-6. Apply the database migrations:
-
-```
-python manage.py migrate
-```
-
-7. Run the development server:
-
-```
-python manage.py runserver
-```
-
-The application should now be running on `http://localhost:8000`.
+5. Access the application in your web browser at `http://localhost:8000`.
 
 ## Usage
 
-To generate a user profile, navigate to the homepage (`/`) and click on the "Generate Profile" button. You can download the generated profile in CSV or JSON format by clicking on the corresponding download button.
+1. Upload a Resume: On the homepage, you can upload your resume in PDF format. ProfileGen will extract the necessary details from the resume.
 
-To view the admin interface, navigate to `/admin`. You can login using the credentials `admin` (username) and `admin123` (password) that are set by default. From the admin interface, you can manage users and view their generated profiles.
+2. Fill in the Form: Alternatively, you can fill in the provided form fields with your personal information, including name, email, phone number, education, work experience, and skills.
+
+3. View the Dashboard: After submitting your information, you will be redirected to the dashboard. It will display the extracted resume details or the information you provided in an organized manner.
+
+## Technologies Used
+
+- Python
+- Django
+- PyPDF2
+
+## Contributions
+
+Contributions to ProfileGen are welcome! If you have any ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
 ## License
 
-ProfileGen is licensed under the [MIT License](https://github.com/keshav1sharma/ProfileGen/blob/main/LICENSE). Feel free to use it for your own projects or modify it to suit your needs.
+ProfileGen is released under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- [PyPDF2](https://pythonhosted.org/PyPDF2/): A library for extracting text from PDF files.
+- [Django](https://www.djangoproject.com/): A high-level Python web framework used to build the application.
+- [Bootstrap](https://getbootstrap.com/): A popular CSS framework for creating responsive and visually appealing web pages.
