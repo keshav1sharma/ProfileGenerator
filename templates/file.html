@@ -7,7 +7,6 @@
 <div class="container m-4 w-25 p-4 mx-auto">
         <div class="shadows-sm">
 
-
               <form method="POST" action="" enctype="multipart/form-data">
                 {% csrf_token %}
               <!-- Text input -->
@@ -57,6 +56,30 @@
                 <div class="form-outline mb-4">
                   <textarea type="text" id="skills" class="form-control" name="skills" placeholder="C++,React,Django" required>{{ skills }}</textarea>
                     <label class="form-label" for="skills"><strong>Skills</strong></label>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="form-outline mb-4">
+                    <textarea type="text" id="linkedin" class="form-control" name="linkedin" placeholder="LinkedIn Profile">{{linkedin}}</textarea>
+                    <label class="form-label" for="linkedin"><strong>LinkedIn</strong></label>
+                </div>
+
+                <!-- Leetcode -->
+                <div class="form-outline mb-4">
+                    <textarea type="text" id="leetcode" class="form-control" name="leetcode" placeholder="Leetcode Profile">{{leetcode}}</textarea>
+                    <label class="form-label" for="leetcode"><strong>Leetcode</strong></label>
+                </div>
+
+                <!-- CodeChef -->
+                <div class="form-outline mb-4">
+                    <textarea type="text" id="codechef" class="form-control" name="codechef" placeholder="CodeChef Profile">{{codechef}}</textarea>
+                    <label class="form-label" for="codechef"><strong>CodeChef</strong></label>
+                </div>
+
+                <!-- CodeForces -->
+                <div class="form-outline mb-4">
+                    <textarea type="text" id="codeforces" class="form-control" name="codeforces" placeholder="CodeForces Profile" >{{codeforces}}</textarea>
+                    <label class="form-label" for="codeforces"><strong>CodeForces</strong></label>
                 </div>
 
               <button type="submit" class="btn btn-primary">Generate</button>
